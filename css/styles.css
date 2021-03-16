@@ -3,7 +3,8 @@ body{
   min-height: 100vh;
   background: #F9F9F9;
   padding: 0px;
-  margin: 0px;  
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;  
 
 }
 
@@ -21,8 +22,6 @@ body{
 
 .navigation ul {
   position: relative;
-  top: 0;
-  left: 0;
   width: 100%;
   padding: 0px;
   margin: 0px;
@@ -47,19 +46,19 @@ body{
 }
 .navigation ul a .icon{
   position: relative;
-  min-width: 60px;
+  min-width: 100px;
   height: 60px;
   line-height: 60px;
   text-align: center;
+  font-size: larger;
 
 }
 .navigation ul a .title{
   position: relative;
-  padding: 0 10px;
   height: 60px;
   line-height: 60px;
-  text-align: start;
-  white-space: nowrap;
+  font-size: large;
+  
 }
 
 
@@ -91,6 +90,10 @@ ul.info {
   width: 100%;
   height: 100%;
 }
+
+
+
+
 
 
 @supports (display: grid) {
@@ -128,3 +131,69 @@ ul.info {
 
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CHECKMARK-------------------------------------------- */
+
+/* The selection_container */
+.selection_container {
+  display: block;
+  position: relative;
+  padding-left: 150px;
+  margin-bottom: 128px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*Hide the browser's default checkbox*/
+.selection_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.selection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 128px;
+  width: 128px;
+  background: #3C3C3C;
+  border-radius: 8px;
+}
+
+/* On mouse-over, add a grey background color */
+.selection_container:hover input ~ .selection {
+  border: 4px solid black;
+  border-radius: 8px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.selection_container input:checked ~ .selection {
+  border: 4px solid rgb(191, 72, 221);
+  border-radius: 8px;
+}
+
+
+
+
+
+/* CHECKMARK-------------------------------------------- */
