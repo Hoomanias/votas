@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!--Charactor set ecoding-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-wid-th, initial-scale=1.0">
+
+    <meta name="description" content="The best place to find the best"> <!--Search engine used description metadata define tag-->
+    <link rel="stylesheet" href="test.css">
+    <title>Votas</title>
+
+    <script defer src="test.js"></script>
+</head>
+<body>
+
+    <h1>The Best Chips Brands </h1>
+    <label class="selection_container">Lays
+        <input name="chips_brands" type="radio" id="chips_brands_lays" onclick="vote();">
+        <span class="selection"></span>
+    </label>
+    <label class="selection_container">Ruffles
+        <input name="chips_brands" type="radio" id="chips_brands_ruffles" onclick="vote();">
+        <span class="selection"></span>
+    </label>
+    <label class="selection_container">Three
+        <input name="chips_brands" type="radio" onclick="vote();">
+        <span class="selection"></span>
+    </label>
+    <span>"Lays Votes:"</span> <span id="lays_v" >0</span>
+    <span>"Ruffles Votes:"</span> <span id="ruffles_v">0</span>
+    <span>"Pringles Votes:"</span> <span id="pringles_v">0</span>
+
+    <input type="button" onclick="add_nums();" value="Click to add">
+    <span id="add_nums">0</span>
+
+</body>
+</html>
+
+

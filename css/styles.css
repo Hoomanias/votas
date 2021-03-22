@@ -145,7 +145,6 @@ ul.info {
 
 
 /* CHECKMARK-------------------------------------------- */
-
 /* The selection_container */
 .selection_container {
   display: block;
@@ -191,9 +190,6 @@ ul.info {
   border: 4px solid rgb(191, 72, 221);
   border-radius: 8px;
 }
-
-
-
-
-
 /* CHECKMARK-------------------------------------------- */
+
+
