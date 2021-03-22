@@ -1,27 +1,51 @@
 
 body{
   min-height: 100vh;
-  background: #F9F9F9;
+  background: #dbcfcf;
   padding: 0px;
   margin: 0px;
   font-family: 'Roboto', sans-serif;  
-
 }
 
 
 .masthead {
+  position: fixed;
+  right: 0%;
+  left: 0%;
+  top:0%;
+  height: 75px;
   background: #272427;
+  overflow: visible;
+
 }
+
+
+.logo{
+  position: fixed;
+  left: 0px;
+  height: 75px;
+  width: 275px;
+  background: #272427;
+  grid-area: logo;
+ }
+
+
 /* Navigation */
 .navigation {
   /*position: fixed; */
-  height: 100%;
-  background: #FFFFFF;
+  position: fixed;
+  left: 0%;
+  top: 75px;
+  bottom: 0px;
+  width: 300px;
+  background: #ffffff;
   overflow: hidden;
 }
 
 .navigation ul {
   position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
   padding: 0px;
   margin: 0px;
@@ -60,25 +84,70 @@ body{
   font-size: large;
   
 }
-
-
 /* Navigation */
+
+
+
+
+
+
+
+/*SEARCH BAR */
+
+.topbarcontainer{
+  padding-top: 22.5px;
+  padding-left: 300px;
+  left: 275px;
+  }
+  
+  .search {
+    padding-left: 30px;
+    width: 50%;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 1px solid #dbdbdb;
+    border-right: none;
+    height: 30px;
+    outline: none;
+    color: #272427;
+  }
+  
+  .searchTerm:focus{
+    color: #272427;
+  }
+  
+  .searchButton {
+    background: #272427;
+    color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  /*SEARCH BAR */
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Removed Footer for now
 .footer {
   background: #997142;
   text-align: center;
-}
+}*/
 
-.logo{
- width: 100%;
- height: 100%;
- text-align: center;
- background: #FFFBD1;
-}
 
-.logo img{
-  height: 75px;
-  width: 275px;
-}
+
 
 ul.info {
   list-style-type: none; /* Remove bullets */
@@ -92,45 +161,169 @@ ul.info {
 }
 
 
+/* NEW GRID LAYOUT */
 
 
 
 
-@supports (display: grid) {
-  @media screen and (min-height: 5px) {
+.main-content {  
+  bottom: 0px;
+  
+  top: 75px;
+  left: 300px;
+  right: 0px;
+  height: 100vh;
+  width: auto;
 
-    .site {
-      display: grid;
-      grid-template-columns:  275px 1fr;
-      grid-template-rows: 75px 15fr 1fr;
-      grid-template-areas:
-        "logo header"
-        "navigation main"
-        "footer main";
+  
+  
+  padding-top: 20px;
+  padding-bottom: 100px;
+  padding-left: 45px;
+
+  
+ 
+  
+  
+  
+  z-index: -1;
+  position: absolute;
+  background: #dbcfcf;
+  
 
 
-		}
-    .logo{
-     grid-area: logo;
-    }
-    .masthead {
-      grid-area: header;
-    }
-
-    .main-content {
-      grid-area: main;
-    }
-
-    .navigation {
-      grid-area: navigation;
-    }
-
-    .footer {
-      grid-area: footer;
-    }
-
-	}
+  display:grid; 
+  grid-gap: 37px;
+  grid-template-columns:  350px 350px 350px 350px;
+  grid-template-rows: 200px 200px 200px ;
+  grid-template-areas:
+  "vote1 vote2 vote3 vote4"
+  "vote5 vote6 vote7 vote8"
+  "vote9 vote10 vote11 vote12";
 }
+
+.vote1{
+  border: rgb(119, 119, 119) 1px solid;
+  
+  grid-area: vote1;
+  background: #c57bc5;
+  width: 100%;
+  height: 100%;
+ }
+ .vote2{
+  border:rgb(119, 119, 119) 1px solid;
+  grid-area: vote2;
+  background: #c57bc5;
+  width: 100%;
+  height: 100%;
+ }
+ .vote3{
+  border: rgb(119, 119, 119) 1px solid;
+  grid-area: vote3;
+  background: #c57bc5;
+  width: 100%;
+  height: 100%;
+ }
+
+ .vote4{
+  border: rgb(119, 119, 119) 1px solid;
+  grid-area: vote4;
+  background: #c57bc5;
+  width: 100%;
+  height: 100%;
+ }
+
+ .vote5{
+  border: rgb(119, 119, 119) 1px solid;
+  grid-area: vote5;
+  background: #c57bc5;
+  width: 100%;
+  height: 100%;
+ }
+
+ .vote6{
+  border: rgb(119, 119, 119) 1px solid;
+  grid-area: vote6;
+  background: #c57bc5;
+  width: 100%;
+  height: 100%;
+ }
+
+  
+ .vote7{
+  border: rgb(119, 119, 119) 1px solid;
+  grid-area: vote7;
+  background: #c57bc5;
+  width: 100%;
+  height: 100%;
+ }
+
+  
+ .vote8{
+  border: rgb(119, 119, 119) 1px solid;
+  grid-area: vote8;
+  background: #c57bc5;
+  width: 100%;
+  height: 100%;
+ }
+
+  
+ .vote9{
+  border: rgb(119, 119, 119) 1px solid;
+  grid-area: vote9;
+  background: #c57bc5;
+  width: 100%;
+  height: 100%;
+ }
+  
+ .vote10{
+  border: rgb(119, 119, 119) 1px solid;
+  grid-area: vote10;
+  background: #c57bc5;
+  width: 100%;
+  height: 100%;
+ }
+  
+ .vote11{
+  border: rgb(119, 119, 119) 1px solid;
+  grid-area: vote11;
+  background: #c57bc5;
+  width: 100%;
+  height: 100%;
+ }
+  
+ .vote12{
+  border: rgb(119, 119, 119) 1px solid;
+  grid-area: vote12;
+  background: #c57bc5;
+  width: 100%;
+  height: 100%;
+ }
+
+/* NEW GRID LAYOUT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
