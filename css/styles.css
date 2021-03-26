@@ -7,7 +7,12 @@ body{
   font-family: 'Roboto', sans-serif;  
 }
 
+.category_image{
 
+  width: 320px; height: 160px; object-fit: cover;  
+  border-radius: 9px;
+
+}
 .masthead {
   position: fixed;
   right: 0%;
@@ -188,7 +193,7 @@ ul.info {
   
   z-index: -1;
   position: absolute;
-  background: #dbcfcf;
+  background: #ffffff;
   
 
 
@@ -202,102 +207,61 @@ ul.info {
   "vote9 vote10 vote11 vote12";
 }
 
-.vote1{
-  border: rgb(119, 119, 119) 1px solid;
-  
-  grid-area: vote1;
-  background: #c57bc5;
+#allvotes{
+  background: #eeeeee;
   width: 100%;
   height: 100%;
+  text-align: center;
+  padding-top: 15px;
+  border-radius: 9px;
+}
+
+.vote1{
+  grid-area: vote1;
  }
  .vote2{
-  border:rgb(119, 119, 119) 1px solid;
   grid-area: vote2;
-  background: #c57bc5;
-  width: 100%;
-  height: 100%;
  }
+
  .vote3{
-  border: rgb(119, 119, 119) 1px solid;
   grid-area: vote3;
-  background: #c57bc5;
-  width: 100%;
-  height: 100%;
  }
 
  .vote4{
-  border: rgb(119, 119, 119) 1px solid;
   grid-area: vote4;
-  background: #c57bc5;
-  width: 100%;
-  height: 100%;
  }
 
  .vote5{
-  border: rgb(119, 119, 119) 1px solid;
   grid-area: vote5;
-  background: #c57bc5;
-  width: 100%;
-  height: 100%;
  }
 
  .vote6{
-  border: rgb(119, 119, 119) 1px solid;
   grid-area: vote6;
-  background: #c57bc5;
-  width: 100%;
-  height: 100%;
  }
 
-  
  .vote7{
-  border: rgb(119, 119, 119) 1px solid;
   grid-area: vote7;
-  background: #c57bc5;
-  width: 100%;
-  height: 100%;
  }
 
-  
  .vote8{
-  border: rgb(119, 119, 119) 1px solid;
   grid-area: vote8;
-  background: #c57bc5;
-  width: 100%;
-  height: 100%;
  }
 
   
  .vote9{
-  border: rgb(119, 119, 119) 1px solid;
   grid-area: vote9;
-  background: #c57bc5;
-  width: 100%;
-  height: 100%;
  }
   
  .vote10{
-  border: rgb(119, 119, 119) 1px solid;
   grid-area: vote10;
-  background: #c57bc5;
-  width: 100%;
-  height: 100%;
  }
   
  .vote11{
-  border: rgb(119, 119, 119) 1px solid;
   grid-area: vote11;
-  background: #c57bc5;
-  width: 100%;
-  height: 100%;
  }
   
  .vote12{
-  border: rgb(119, 119, 119) 1px solid;
   grid-area: vote12;
-  background: #c57bc5;
-  width: 100%;
-  height: 100%;
  }
 
 /* NEW GRID LAYOUT */
