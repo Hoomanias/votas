@@ -1,0 +1,146 @@
+
+/* ========= Table of Contents =======
+
+1. Global Styles
+    1.1. Search Bar
+
+2. Typography
+
+3. Components
+    3.1. Checkmarks
+
+4. Grid Layout
+
+======================================*/
+
+
+
+/* ===============
+   1. Global Syles
+   =============== */
+
+   body{
+    min-height: 100vh;
+    background: #ffffff;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif; 
+  }
+  
+  .masthead {
+    position: fixed;
+    right: 0%;
+    left: 0%;
+    top:0%;
+    height: 75px;
+    background: #272427;
+    z-index: 2;
+  }
+  
+  .logo{
+    position: fixed;
+    left: 0px;
+    height: 75px;
+    width: 275px;
+    background: #272427;
+    grid-area: logo;
+   }
+  
+   .site{
+    width: 100%;
+    height: 100%;
+  }
+  
+  /*------------------------- 1.1 SEARCH BAR -------------------------*/
+  
+  .topbarcontainer{
+    padding-top: 22.5px;
+    padding-left: 300px;
+    left: 275px;
+    }
+    
+    .search {
+      padding-left: 30px;
+      width: 50%;
+      display: flex;
+    }
+    
+    .searchTerm {
+      width: 100%;
+      border: 1px solid #dbdbdb;
+      border-right: none;
+      height: 30px;
+      outline: none;
+      color: #272427;
+    }
+    
+    .searchTerm:focus{
+      color: #272427;
+    }
+    
+    .searchButton {
+      background: #272427;
+      color: rgb(255, 255, 255);
+      border: 1px solid #000000;
+      cursor: pointer;
+      font-size: 15px;
+    }
+/*---------------------------------------------------------------------------*/
+    
+/* ===============
+  2. Typography
+  =============== */
+
+
+/* ===============
+  3. Components
+  =============== */
+
+/*------------------------- 3.1 Checkmarks -------------------------*/
+
+/* The selection_container */
+.selection_container {
+  display: block;
+  position: relative;
+  padding-left: 150px;
+  margin-bottom: 128px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*Hide the browser's default checkbox*/
+.selection_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.selection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 128px;
+  width: 128px;
+  background: #3C3C3C;
+  border-radius: 8px;
+}
+
+/* On mouse-over, add a grey background color */
+.selection_container:hover input ~ .selection {
+  border: 4px solid black;
+  border-radius: 8px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.selection_container input:checked ~ .selection {
+  border: 4px solid rgb(191, 72, 221);
+  border-radius: 8px;
+}
+/*---------------------------------------------------------------------------*/
