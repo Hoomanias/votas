@@ -1,18 +1,78 @@
 
 body{
   min-height: 100vh;
-  background: #dbcfcf;
+  background: #ffffff;
   padding: 0px;
   margin: 0px;
-  font-family: 'Roboto', sans-serif;  
+  font-family: 'Roboto', sans-serif; 
+  
 }
 
+
+/*THIS IS THE PICTURES FORMAT AND CROP*/
 .category_image{
 
-  width: 320px; height: 160px; object-fit: cover;  
-  border-radius: 9px;
+  width: 295px; height: 175px; object-fit: cover;   object-position: 50% 50%;
+  border-radius: 15px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+  
+  
+  /*The width+margin-left-right has to equal to the grid div width*/
 
 }
+
+
+a {
+  color: #636363;
+  text-decoration: none;
+}
+
+a:hover 
+{
+   color:#c05858; 
+   text-decoration:none; 
+   cursor:pointer;  
+}
+
+
+
+/*SUBHEADING TEXT*/
+#topicheadings{ 
+  font-family: 'Roboto', sans-serif;  
+  margin-top: 0;
+  padding-top: 4px; /*To lower or raise subheading text*/
+}
+
+
+/*TOPIC NAME TEXT*/
+.topictitles { 
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif; 
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+/*Number of Views Text*/
+.viewsnumber{
+
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  float: right;
+  margin-top: 0;
+  margin-right: 10px;
+  text-align: right;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+
+
+
+}
+
+
+
+
 .masthead {
   position: fixed;
   right: 0%;
@@ -20,8 +80,7 @@ body{
   top:0%;
   height: 75px;
   background: #272427;
-  overflow: visible;
-
+  z-index: 2;
 }
 
 
@@ -44,7 +103,7 @@ body{
   bottom: 0px;
   width: 300px;
   background: #ffffff;
-  overflow: hidden;
+  z-index: 2;
 }
 
 .navigation ul {
@@ -182,38 +241,54 @@ ul.info {
 
   
   
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 100px;
   padding-left: 45px;
 
-  
- 
-  
-  
-  
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   background: #ffffff;
   
 
 
   display:grid; 
-  grid-gap: 37px;
-  grid-template-columns:  350px 350px 350px 350px;
-  grid-template-rows: 200px 200px 200px ;
+  column-gap: 20px;
+
+  grid-template-columns:  315px 315px 315px 315px;
+  grid-template-rows: 25px 225px 25px 225px 25px 225px ;
   grid-template-areas:
+  "heading1 heading1 heading1 heading1"
   "vote1 vote2 vote3 vote4"
+  "heading2 heading2 heading2 heading2"
   "vote5 vote6 vote7 vote8"
+  "heading3 heading3 heading3 heading3"
   "vote9 vote10 vote11 vote12";
 }
 
 #allvotes{
-  background: #eeeeee;
-  width: 100%;
-  height: 100%;
-  text-align: center;
+  background: #ffffff;
+  text-align: left;
   padding-top: 15px;
-  border-radius: 9px;
+  border-radius: 0px;
+  z-index: 0;
+ 
+}
+
+.headingall{
+  background: #ffffff;
+}
+
+.heading1{
+  grid-area: heading1;
+  
+}
+
+.heading2{
+  grid-area: heading2;
+
+}
+.heading3{
+  grid-area: heading3;
 }
 
 .vote1{
@@ -247,7 +322,6 @@ ul.info {
   grid-area: vote8;
  }
 
-  
  .vote9{
   grid-area: vote9;
  }
@@ -302,6 +376,7 @@ ul.info {
 
 
 /* CHECKMARK-------------------------------------------- */
+
 /* The selection_container */
 .selection_container {
   display: block;
@@ -347,6 +422,9 @@ ul.info {
   border: 4px solid rgb(191, 72, 221);
   border-radius: 8px;
 }
+
+
+
+
+
 /* CHECKMARK-------------------------------------------- */
-
-
