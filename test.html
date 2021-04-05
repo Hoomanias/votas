@@ -10,6 +10,10 @@
     <title>Votas</title>
 
     <script defer src="test.js"></script>
+
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="175554272546-5g6nbt0tp84hrbfjomud8dlgso0qfqvh.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
 
@@ -26,13 +30,33 @@
         <input name="chips_brands" type="radio" onclick="vote();">
         <span class="selection"></span>
     </label>
-    <span>"Lays Votes:"</span> <span id="lays_v" >0</span>
-    <span>"Ruffles Votes:"</span> <span id="ruffles_v">0</span>
-    <span>"Pringles Votes:"</span> <span id="pringles_v">0</span>
+
+    <li>
+        <span>Lays Votes:</span> <span id="lays_v" >0</span>
+        <span>Percent:</span> <span id="lays_p" >0</span>
+        <span>%</span>
+    </li>
+    
+    <li>
+        <span>Ruffles Votes:</span> <span id="ruffles_v">0</span>
+        <span>Percent:</span> <span id="ruffles_p" >0</span>
+        <span>%</span>
+    </li>
+    
+    <li>
+        <span>Pringles Votes:</span> <span id="pringles_v">0</span>
+        <span>Percent:</span> <span id="pringles_p" >0</span>
+        <span>%</span>
+    </li>
+    
 
     <input type="button" onclick="add_nums();" value="Click to add">
     <span id="add_nums">0</span>
 
+    
+    <a href="#" onclick="onSignIn();" ><div id="signin"></div></a>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <a href="#" onclick="signOut();">Sign out</a>
 </body>
 </html>
 
